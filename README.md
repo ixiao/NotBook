@@ -12,7 +12,7 @@ iOS-UI 一些方法及释义
 
 {
 //文本将要返回，调用此方法，配合
-"__-(BOOL)textFieldShouldReturn:(UITextField *)textField__" 方法可以使文本显示在标签上
+"- (IBAction)editingLbel:(UITextField *)sender" 方法可以使文本显示在标签上
 
     [self.textField resignFirstResponder];
     return YES;
