@@ -33,12 +33,18 @@ iOS-UI 一些方法及释义
 
 <samp>
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
+
 {
+
     [self.textField resignFirstResponder];
     return YES;
+
 }
+
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+
 {
+
     if (self.segmentControl.selectedSegmentIndex == 1)
     {
         if ([@"\n" isEqualToString:text])
