@@ -11,6 +11,8 @@ iOS-UI 一些方法及释义
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 
 {
+//文本将要返回，调用此方法，配合
+"__-(BOOL)textFieldShouldReturn:(UITextField *)textField__" 方法可以使文本显示在标签上
 
     [self.textField resignFirstResponder];
     return YES;
@@ -22,7 +24,7 @@ iOS-UI 一些方法及释义
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 
 {
-
+//如果你的textview里不用回车键，可以把回车键当做退出键盘的响应键。
     if (self.segmentControl.selectedSegmentIndex == 1)
     {
         if ([@"\n" isEqualToString:text])
